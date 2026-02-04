@@ -1,0 +1,8 @@
+from google import genai
+client = genai.Client(api_key="AIzaSyBKoVKij3VdUpm-KrYzNeXWJRq5aH-ku70") 
+
+response = client.models.generate_content(
+    model='gemini-2.5-flash',
+    contents='why is the sky blue'
+).text
+print(response)
